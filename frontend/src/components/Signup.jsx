@@ -93,7 +93,14 @@ function Signup() {
               disabled={loading}
             />
             <label htmlFor="terms">
-              I agree to the <a href="#" className="terms-link">Terms and Conditions</a>
+              I agree to the{' '}
+              <button 
+                type="button"
+                className="terms-link"
+                onClick={(e) => e.preventDefault()}
+              >
+                Terms and Conditions
+              </button>
             </label>
           </div>
 
