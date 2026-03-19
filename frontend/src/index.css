@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-bg: #030608;
+  --surface-color: #050a0f;
+  --surface-hover: rgba(0, 240, 255, 0.05);
+  --surface-color-solid: #050a0f;
+  --border-color: rgba(0, 240, 255, 0.2);
+  --border-bright: rgba(0, 240, 255, 0.5);
+  --text-primary: #e0f8ff;
+  --text-secondary: #8da4ac;
+  --text-muted: #4a636b;
+  
+  --accent-cyan: #00f0ff;
+  --accent-dark: #094950;
+  --accent-hover: #12727c;
+  
+  --glow-shadow: 0 0 10px rgba(0, 240, 255, 0.05);
+  --glow-shadow-intense: 0 0 20px rgba(0, 240, 255, 0.15);
+  
+  --radii-standard: 2px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--primary-bg);
+  background-image: 
+    linear-gradient(to right, rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  color: var(--text-primary);
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: 
+    radial-gradient(circle at 10% 10%, rgba(0, 240, 255, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 90% 90%, rgba(9, 73, 80, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(2, 10, 15, 0) 0%, var(--primary-bg) 100%);
+  pointer-events: none;
+  z-index: -1;
+  animation: ambientLight 20s ease-in-out infinite alternate;
+}
+
+@keyframes ambientLight {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.1); opacity: 1; }
+}
+
+code {
+  font-family: 'Space Mono', source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-bg);
+  border-left: 1px solid var(--border-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-dark);
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-cyan);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  color: var(--text-primary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
