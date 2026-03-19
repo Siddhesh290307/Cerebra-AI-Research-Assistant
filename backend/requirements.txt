@@ -6,7 +6,7 @@ groq==0.4.2
 python-jose[cryptography]==3.3.0
 faiss-cpu==1.7.4
 numpy==1.26.4
-langchain-huggingface==0.0.3
-sentence-transformers==2.5.1
+langchain-huggingface
+sentence-transformers
 PyMuPDF==1.23.21
 arxiv==2.1.0
