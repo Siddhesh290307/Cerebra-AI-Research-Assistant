@@ -234,4 +234,6 @@ POST /research_query      # Ask questions about indexed papers
 
 ## 🛡️ License
 
-This project is intended for research and educational purposes. 
+This project is licensed under the MIT License.
+
+This project is intended for research and educational purposes, serving as a reference implementation for learning, experimentation, and academic exploration. However, the software is provided under the terms of the MIT License, which permits use, modification, and distribution, including for commercial purposes, provided that proper attribution is given to the original author.
